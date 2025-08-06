@@ -1,0 +1,490 @@
+/* Variables de colores */
+:root {
+  --primary-red: #dc3545;
+  --light-red: #f8d7da;
+  --gray-light: #f8f9fa;
+  --gray-medium: #6c757d;
+  --gray-dark: #495057;
+  --white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--gray-dark);
+  background-color: var(--white);
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--white) 0%, var(--gray-light) 100%);
+  padding-top: 80px;
+}
+
+.hero-section img {
+  box-shadow: 0 10px 30px var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.hero-section img:hover {
+  transform: scale(1.05);
+}
+
+/* Navbar */
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand img {
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.1);
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--primary-red);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Secciones */
+section {
+  padding: 80px 0;
+}
+
+/* Service Cards */
+.service-card {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px var(--shadow) !important;
+  border-color: var(--light-red);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+}
+
+/* Formulario de contacto */
+.form-control {
+  border-radius: 8px;
+  padding: 12px 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+.form-control:focus {
+  box-shadow: 0 4px 12px var(--shadow);
+  border-color: var(--primary-red);
+}
+
+.form-control.is-invalid {
+  border-color: var(--primary-red);
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+/* Botones */
+.btn {
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: none;
+}
+
+.btn-danger {
+  background-color: var(--primary-red);
+  border-color: var(--primary-red);
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
+}
+
+/* Alertas */
+.alert {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 80vh;
+    padding-top: 60px;
+  }
+  
+  section {
+    padding: 60px 0;
+  }
+  
+  .service-card {
+    margin-bottom: 20px;
+  }
+}
+
+/* Estilos para el loading spinner */
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Estilos para los checkmarks */
+.bi-check-circle-fill {
+  font-size: 1.2rem;
+}
+
+/* Estilos para el footer */
+footer {
+  background: linear-gradient(135deg, var(--primary-red) 0%, #c82333 100%);
+}
+
+/* Estilos para el texto de error */
+.text-danger.small {
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Estilos para las tarjetas de misión */
+.bg-light {
+  background-color: var(--gray-light) !important;
+}
+
+/* Estilos para los iconos de servicios */
+.service-icon i {
+  background: linear-gradient(135deg, var(--primary-red), #c82333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Estilos para el hover de los enlaces */
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-red) !important;
+}
+
+/* Estilos para el focus de los elementos */
+.form-control:focus,
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+/* Estilos para el navbar en scroll */
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  box-shadow: 0 2px 10px var(--shadow);
+}
+
+/* Estilos para el texto de placeholder */
+::placeholder {
+  color: var(--gray-medium) !important;
+  opacity: 0.7;
+}
+
+/* Estilos para la selección de texto */
+::selection {
+  background-color: var(--light-red);
+  color: var(--gray-dark);
+}
+
+/* Estilos para enlaces activos en navegación */
+.nav-link.active {
+  color: var(--primary-red) !important;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Estilos para mejorar la accesibilidad */
+.btn:focus,
+.form-control:focus {
+  outline: 2px solid var(--primary-red);
+  outline-offset: 2px;
+}
+
+/* Estilos para el estado de carga */
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Estilos para las animaciones de entrada */
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Estilos para mejorar la legibilidad */
+.text-secondary {
+  color: var(--gray-medium) !important;
+}
+
+/* Estilos para los iconos en las tarjetas de servicios */
+.service-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--light-red), #f8d7da);
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.service-icon i {
+  font-size: 1.5rem;
+  color: var(--primary-red);
+}
+
+/* Estilos para el hover de las tarjetas de servicios */
+.service-card:hover .service-icon {
+  background: linear-gradient(135deg, var(--primary-red), #c82333);
+  transform: scale(1.1);
+}
+
+.service-card:hover .service-icon i {
+  color: var(--white);
+}
+
+/* Estilos para mejorar el espaciado */
+.lead {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+/* Estilos para el footer */
+footer {
+  margin-top: 0;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 576px) {
+  .hero-section {
+    padding-top: 40px;
+    min-height: 70vh;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  
+  .service-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Estilos para las tarjetas de redes sociales */
+.social-card {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.social-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px var(--shadow) !important;
+  border-color: var(--light-red);
+  text-decoration: none;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--gray-light);
+  transition: all 0.3s ease;
+}
+
+.social-card:hover .social-icon {
+  transform: scale(1.1);
+}
+
+/* Estilos para el contenedor del QR */
+.qr-container {
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.qr-container:hover {
+  border-color: var(--primary-red);
+  transform: scale(1.02);
+}
+
+/* Estilos para el botón de WhatsApp */
+.btn-success {
+  background-color: #25d366;
+  border-color: #25d366;
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #128c7e;
+  border-color: #128c7e;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+/* Estilos para los iconos de redes sociales */
+.bi-facebook {
+  color: #1877f2 !important;
+}
+
+.bi-instagram {
+  color: #e4405f !important;
+}
+
+.bi-linkedin {
+  color: #0077b5 !important;
+}
+
+.bi-youtube {
+  color: #ff0000 !important;
+}
+
+.bi-whatsapp {
+  color: #25d366 !important;
+}
+
+/* Estilos para mejorar la responsividad de las tarjetas sociales */
+@media (max-width: 768px) {
+  .social-card {
+    margin-bottom: 1rem;
+  }
+  
+  .qr-container {
+    max-width: 150px !important;
+  }
+}
+
+/* Estilos para las tarjetas de clientes estrella */
+.client-card {
+  transition: all 0.3s ease;
+}
+
+.client-card:hover {
+  transform: translateY(-5px);
+  text-decoration: none;
+}
+
+.client-card .bg-light {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.client-card:hover .bg-light {
+  box-shadow: 0 15px 35px var(--shadow) !important;
+  border-color: var(--light-red);
+  background-color: var(--white) !important;
+}
+
+.client-logo img {
+  transition: all 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.client-card:hover .client-logo img {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+.client-card h6 {
+  transition: color 0.3s ease;
+}
+
+.client-card:hover h6 {
+  color: var(--primary-red) !important;
+}
+
+/* Estilos para el hover-shadow */
+.hover-shadow {
+  transition: all 0.3s ease;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 15px 35px var(--shadow) !important;
+}
+
+/* Estilos responsivos para las tarjetas de clientes */
+@media (max-width: 768px) {
+  .client-card {
+    margin-bottom: 1rem;
+  }
+  
+  .client-logo img {
+    max-width: 60px !important;
+  }
+}
