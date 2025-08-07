@@ -377,11 +377,21 @@ footer {
 .qr-container {
   transition: all 0.3s ease;
   border: 2px solid transparent;
+  max-width: 200px;
+  margin: 0 auto;
 }
 
 .qr-container:hover {
   border-color: var(--primary-red);
   transform: scale(1.02);
+}
+
+/* Estilos para la imagen del QR */
+.qr-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Estilos para el botón de WhatsApp */
@@ -427,6 +437,46 @@ footer {
   
   .qr-container {
     max-width: 150px !important;
+    padding: 1rem !important;
+  }
+  
+  .qr-container img {
+    max-width: 120px !important;
+    height: auto !important;
+  }
+}
+
+/* Estilos específicos para dispositivos móviles pequeños */
+@media (max-width: 576px) {
+  .qr-container {
+    max-width: 120px !important;
+    padding: 0.75rem !important;
+  }
+  
+  .qr-container img {
+    max-width: 100px !important;
+    height: auto !important;
+  }
+  
+  .bg-light.p-5 {
+    padding: 1.5rem !important;
+  }
+}
+
+/* Estilos para dispositivos muy pequeños */
+@media (max-width: 480px) {
+  .qr-container {
+    max-width: 100px !important;
+    padding: 0.5rem !important;
+  }
+  
+  .qr-container img {
+    max-width: 80px !important;
+    height: auto !important;
+  }
+  
+  .bg-light.p-5 {
+    padding: 1rem !important;
   }
 }
 
