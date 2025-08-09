@@ -66,7 +66,7 @@ Cambia los nombres de usuario en las tarjetas:
 ## 📧 Configuración del Email
 
 1. Abre el archivo `php/api/contact.php`
-2. Busca la línea: `$to = "antonymendez.esp@gmail.com";`
+2. Busca la línea: `$to = "escrine tu correo (AQUI)";`
 3. Cambia por tu dirección de email real
 
 ## 🎨 Personalización
@@ -120,5 +120,6 @@ PageOSME/
 Para cualquier duda o problema, contacta al equipo de desarrollo.
 
 ---
+
 
 **Soporte OSME** - Despacho de contaduría en Santa Catarina, Nuevo León 
